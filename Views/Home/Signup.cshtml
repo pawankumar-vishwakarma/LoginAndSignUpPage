@@ -1,0 +1,60 @@
+﻿@model LoginFormASPCore6.Models.User
+
+@{
+    ViewData["Title"] = "Signup";
+}
+
+
+<section class="vh-80 gradient-custom">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+
+                        <div class="mb-md-3 mt-md-1 pb-5">
+                            <h1 class="fw-bold mb-5 text-uppercase">Signup</h1>
+
+                            <form asp-action="Signup">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <div class="form-outline form-white mb-4">
+                                    @* <label asp-for="EmpName" class="form-label"></label> *@
+                                    <input asp-for="EmpName" class="form-control form-control-lg" placeholder="Name"/>
+                                    <span asp-validation-for="EmpName" class="text-danger"></span>
+                                </div>
+                                <div class="form-outline form-white mb-4">
+                                    @* <label asp-for="Gender" class="form-label"></label> *@
+                                    <input asp-for="Gender" class="form-control form-control-lg" placeholder="Gender"/>
+                                    <span asp-validation-for="Gender" class="text-danger"></span>
+                                </div>
+                                <div class="form-outline form-white mb-4">
+                                    @* <label asp-for="Age" class="form-label"></label> *@
+                                    <input asp-for="Age" class="form-control form-control-lg" placeholder="Age"/>
+                                    <span asp-validation-for="Age" class="text-danger"></span>
+                                </div>
+                                <div class="form-outline form-white mb-4">
+                                    @* <label asp-for="Email" class="form-label"></label> *@
+                                    <input asp-for="Email" class="form-control form-control-lg" placeholder="Email"/>
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+                                <div class="form-outline form-white mb-4">
+                                    @* <label asp-for="Password" class="form-label"></label> *@
+                                    <input asp-for="Password" class="form-control form-control-lg" placeholder="Password"/>
+                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                </div>
+                                    <input type="submit" value="Signup" class="btn btn-outline-light btn-lg px-5" />  
+                                <div class="mt-5">
+                                    <p class="mb-0">
+                                        Already have an account? <a asp-action="Login" class="text-white-50 fw-bold">Login</a>
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+

@@ -1,0 +1,67 @@
+﻿@model LoginFormASPCore6.Models.User
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+
+
+
+<section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+
+                        <div class="mb-md-3 mt-md-1 pb-5">
+                            <h1 class="fw-bold mb-5 text-uppercase">Login</h1>
+                            @{
+                                if (ViewBag.Message != null)
+                                {
+                                    <p style="color:red">@ViewBag.Message</p>
+                                }
+                            }
+
+                            <form asp-action="Login">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <div class="form-outline form-white mb-4">
+                                    @* <label asp-for="Email" class="form-label mx-5" ></label> *@
+                                    <input asp-for="Email" class="form-control form-control-lg" placeholder="Email" />
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+                                <div class="form-outline form-white mb-4">
+                                    @* <label asp-for="Password" class="form-label"></label> *@
+                                    <input asp-for="Password" class="form-control form-control-lg" placeholder="Password" />
+                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                </div>
+                                <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
+
+                                <input type="submit" value="Login" class="btn btn-outline-light btn-lg px-5" />
+
+                                <div class="mt-5">
+                                    <p class="mb-0">
+                                        Don't have an account? <a asp-controller="Home" asp-action="Signup" class="text-white-50 fw-bold">Signup</a>
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
