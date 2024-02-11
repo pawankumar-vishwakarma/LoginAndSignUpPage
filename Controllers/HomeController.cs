@@ -52,6 +52,7 @@ namespace LoginFormASPCore6.Controllers
             {
                await context.Users.AddAsync(u);
                 await context.SaveChangesAsync();
+                TempData["Success"] = "Registered Successfully";
                 return RedirectToAction("Login");
             }
             return View();
@@ -61,7 +62,7 @@ namespace LoginFormASPCore6.Controllers
         {
             if (HttpContext.Session.GetString("UserSession") != null)
             {
-                ViewBag.MySession = HttpContext.Session.GetString("UserSession").ToString();
+                ViewData["MySession"] = HttpContext.Session.GetString("UserSession").ToString();
             }
             else
             {
