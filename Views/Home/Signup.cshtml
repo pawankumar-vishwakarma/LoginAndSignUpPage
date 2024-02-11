@@ -24,12 +24,15 @@
                                 </div>
                                 <div class="form-outline form-white mb-4">
                                     @* <label asp-for="Gender" class="form-label"></label> *@
-                                    <input asp-for="Gender" class="form-control form-control-lg" placeholder="Gender"/>
+                                   @*  <input asp-for="Gender" class="form-control form-control-lg" placeholder="Gender"/> *@
+                                    <select name="Gender" asp-items="@ViewBag.Gender" class="form-control form-control-lg">
+                                        <option value="">Select Gender</option>
+                                    </select>
                                     <span asp-validation-for="Gender" class="text-danger"></span>
                                 </div>
                                 <div class="form-outline form-white mb-4">
                                     @* <label asp-for="Age" class="form-label"></label> *@
-                                    <input asp-for="Age" class="form-control form-control-lg" placeholder="Age"/>
+                                    <input asp-for="Age" class="form-control form-control-lg" placeholder="Age"/>                                    
                                     <span asp-validation-for="Age" class="text-danger"></span>
                                 </div>
                                 <div class="form-outline form-white mb-4">

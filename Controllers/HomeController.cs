@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace LoginFormASPCore6.Controllers
 {
@@ -32,10 +33,11 @@ namespace LoginFormASPCore6.Controllers
             var myUser = context.Users.Where(x => x.Email == u.Email && x.Password == u.Password).FirstOrDefault();
             if (myUser != null)
             {
-                HttpContext.Session.SetString("UserSession",myUser.EmpName);
+                HttpContext.Session.SetString("UserSession", myUser.EmpName);
                 return RedirectToAction("Dashboard");
             }
-            else{
+            else
+            {
                 ViewBag.Message = "Bad Credential Email or Password.";
             }
             return View();
@@ -43,14 +45,20 @@ namespace LoginFormASPCore6.Controllers
 
         public IActionResult Signup()
         {
+            List<SelectListItem> Gender = new()
+            {
+                new SelectListItem {Value="Male",Text="Male"},
+                new SelectListItem {Value="Female",Text="Female"}
+            };
+            ViewBag.Gender = Gender;
             return View();
         }
         [HttpPost]
-        public async Task <IActionResult> Signup(User u)
+        public async Task<IActionResult> Signup(User u)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-               await context.Users.AddAsync(u);
+                await context.Users.AddAsync(u);
                 await context.SaveChangesAsync();
                 TempData["Success"] = "Registered Successfully";
                 return RedirectToAction("Login");
@@ -74,7 +82,7 @@ namespace LoginFormASPCore6.Controllers
         {
             return View();
         }
-            
+
         public IActionResult Logout()
         {
             if (HttpContext.Session.GetString("UserSession") != null)
