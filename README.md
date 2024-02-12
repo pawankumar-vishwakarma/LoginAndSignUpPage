@@ -5,6 +5,12 @@ This repository includes Login and SignUp with session using Asp .Net Core 6 MVC
 - For Database Operation & Connectivity i have used Entity Framework Core.
 - For Lgin & Logout i have used Session.
 
+
+<h3>Watch the video : </h3>
+
+https://github.com/pawankumar-vishwakarma/LoginAndSignUpPage/assets/58881689/6b69c55f-8426-433a-a15e-117a1529894e
+
+
 <h3>Login</h3>
   <div align="center"> <img src="https://raw.githubusercontent.com/pawankumar-vishwakarma/LoginAndSignUpPage/master/wwwroot/images/Login.png"> </div>
   
