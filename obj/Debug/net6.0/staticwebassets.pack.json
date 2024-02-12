@@ -13,6 +13,34 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\pawan\\VSProjects\\LoginFormASPCore6\\LoginFormASPCore6\\wwwroot\\images\\Dashboard.png",
+      "PackagePath": "staticwebassets\\images\\Dashboard.png"
+    },
+    {
+      "Id": "C:\\Users\\pawan\\VSProjects\\LoginFormASPCore6\\LoginFormASPCore6\\wwwroot\\images\\Database.png",
+      "PackagePath": "staticwebassets\\images\\Database.png"
+    },
+    {
+      "Id": "C:\\Users\\pawan\\VSProjects\\LoginFormASPCore6\\LoginFormASPCore6\\wwwroot\\images\\Login.png",
+      "PackagePath": "staticwebassets\\images\\Login.png"
+    },
+    {
+      "Id": "C:\\Users\\pawan\\VSProjects\\LoginFormASPCore6\\LoginFormASPCore6\\wwwroot\\images\\LoginData.png",
+      "PackagePath": "staticwebassets\\images\\LoginData.png"
+    },
+    {
+      "Id": "C:\\Users\\pawan\\VSProjects\\LoginFormASPCore6\\LoginFormASPCore6\\wwwroot\\images\\Signup.png",
+      "PackagePath": "staticwebassets\\images\\Signup.png"
+    },
+    {
+      "Id": "C:\\Users\\pawan\\VSProjects\\LoginFormASPCore6\\LoginFormASPCore6\\wwwroot\\images\\SignupData.png",
+      "PackagePath": "staticwebassets\\images\\SignupData.png"
+    },
+    {
+      "Id": "C:\\Users\\pawan\\VSProjects\\LoginFormASPCore6\\LoginFormASPCore6\\wwwroot\\images\\SignupSuccess.png",
+      "PackagePath": "staticwebassets\\images\\SignupSuccess.png"
+    },
+    {
       "Id": "C:\\Users\\pawan\\VSProjects\\LoginFormASPCore6\\LoginFormASPCore6\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
